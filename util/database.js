@@ -1,12 +1,8 @@
-const mysql = require("mysql2");
+const Sequalize = require("sequelize").Sequelize;
 
-//multiple connections
-const pool = mysql.createPool({
+const sequalize = new Sequalize("node-complete", "root", "helloworld", {
+  dialect: "mysql",
   host: "localhost",
-  user: "root",
-  database: "node-complete", //schema name
-  password: "helloworld",
 });
 
-module.exports = pool.promise();
-//promises handle asnyc data instead of callbacks
+module.exports = sequalize;
