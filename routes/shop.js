@@ -18,9 +18,9 @@ router.post("/cart-delete-item", shopController.deleteCartItem);
 
 router.get("/orders", shopController.getOrders);
 
-// router.get("/checkout", shopController.getCheckout);
+// // router.get("/checkout", shopController.getCheckout);
 
-//handle details, :__ can be anything, dynamic path should be put last
+// //handle details, :__ can be anything, dynamic path should be put last
 router.get("/products/:productID", shopController.getProductDetail);
 
 router.post("/create-order", shopController.postOrder);
